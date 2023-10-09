@@ -22,6 +22,9 @@ inputs:
   workflow:
     description: provide workflow name ex. custom-workflow-ci
     required: false
+  workflowRef:
+    description: provide workflow branch ref ex. "main"
+    required: false
   workflowId:
     description: provide workflow id or workflow file name ex. ci.yml
     required: false

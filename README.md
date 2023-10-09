@@ -10,11 +10,12 @@ Maintain the state of workflows in a group and invoke a workflow_dispatch within
 - finished: **provide wherther workflow has finised ex. true or false**
 - workflow: **provide workflow name ex. custom-workflow-ci**
 - workflowId: **provide workflow id or workflow file name ex. ci.yml**
+- workflowRef: **provide workflow branch ref ex. "main"**
 - repository: **provide the repository path ex. username/repository**
 
 ```yml
 - name: Workflow Dispatcher Running
-  uses: gh-actions-projects/workflow-dispatcher@v1.0.0
+  uses: OneHox/workflow-dispatcher@v1.0.1
   with:
     host: https://cute-blue.cyclic.sh
     task: manifest
@@ -24,5 +25,6 @@ Maintain the state of workflows in a group and invoke a workflow_dispatch within
     finished: false
     workflow: ci-products
     workflowId: ci.yml
+    workflowRef: main
     repository: username/nodejs-express-api-app
 ```
