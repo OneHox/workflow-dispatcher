@@ -19,10 +19,11 @@ async function run() {
   const workflow = core.getInput("workflow", { required: false });
   const workflowId = core.getInput("workflowId", { required: false });
   const repository = core.getInput("repository", { required: false });
+  const workflowRef = core.getInput("workflowRef", { required: false });
 
   switch (task) {
     case TASK.manifest:
-      const payload1 = { group, watch, token, repository, workflowId };
+      const payload1 = { group, watch, token, repository, workflowId, workflowRef };
       try {
         const apiUrl = `${host}/${task}`;
         const response = await axios.post(apiUrl, payload1);
