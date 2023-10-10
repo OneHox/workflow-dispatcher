@@ -34,7 +34,7 @@ async function run() {
       }
       break;
     case TASK.vote:
-      const payload2 = { group, token, workflow, finished };
+      const payload2 = { group, workflow, finished };
       try {
         const apiUrl = `${host}/${task}`;
         const response = await axios.post(apiUrl, payload2);
